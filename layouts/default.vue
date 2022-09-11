@@ -1,4 +1,4 @@
-<template>
+<template >
   <v-app dark>
     <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
       <v-list>
@@ -38,9 +38,10 @@
 </template>
 
 <script>
+
 export default {
   name: 'DefaultLayout',
-  data () {
+  data() {
     return {
       clipped: false,
       drawer: false,
@@ -48,14 +49,14 @@ export default {
       themeIcon: 'lightbulb-on',
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
+          icon: 'mdi-home',
+          title: 'Home',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-account-circle',
+          title: 'Autor',
+          to: '/about'
         }
       ],
       miniVariant: false,
@@ -65,7 +66,7 @@ export default {
     }
   },
   methods: {
-    themeToggle () {
+    themeToggle() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark
       this.themeIcon = this.$vuetify.theme.dark ? 'lightbulb' : 'lightbulb-on'
     }
